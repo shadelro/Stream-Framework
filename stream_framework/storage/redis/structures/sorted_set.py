@@ -64,8 +64,8 @@ class RedisSortedSetCache(BaseRedisListCache, BaseRedisHashCache):
 
             for score, value in score_value_chunks:
                 result = redis.zadd(key, {value: score})
-                logger.debug('adding to %s with score_value_chunk %s',
-                             key, score_value_chunk)
+                logger.debug('adding to %s with value %s and score %s',
+                             key, value, score)
                 results.append(result)
             return results
 
