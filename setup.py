@@ -17,7 +17,6 @@ tests_require = [
 ]
 
 install_requires = [
-    'celery>=3.0.0',
     'six'
 ]
 
@@ -25,6 +24,8 @@ extras_require = {
     'test': tests_require,
     'redis': ['redis>=3.0'],
     'cassandra': ['cassandra-driver>=2.7.2'],
+    'rq': ['rq'],
+    'celery': ['celery>=3.0.0']
 }
 
 class PyTest(TestCommand):

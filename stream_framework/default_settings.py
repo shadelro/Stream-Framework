@@ -7,7 +7,14 @@ STREAM_REDIS_CONFIG = {
         'db': 0,
         'password': None
     },
+    'rq': {
+        'host': '127.0.0.1',
+        'port': 6379,
+        'db': 1,
+        'password': None
+    }
 }
+
 
 STREAM_CASSANDRA_HOSTS = ['localhost']
 
@@ -24,6 +31,8 @@ CASSANDRA_DRIVER_KWARGS = {
 }
 
 STREAM_METRIC_CLASS = 'stream_framework.metrics.base.Metrics'
+
+STREAM_ASYNC_CLASS = 'stream_framework.tasks.celery.CeleryTask'
 
 STREAM_METRICS_OPTIONS = {}
 
